@@ -139,12 +139,46 @@ function fizzBuzz(array) {
   return secondArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+  let letras = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5,
+  }
+
+  let resultado = '';
+
+  for (let i = 0; i < string.length; i += 1){
+    if(letras[string[i]]){
+      resultado += letras[string[i]]
+    }else{
+      resultado += string[i];
+    }
+  }
+  
+
+     /*  string.replace(/a/gm, '1');
+   
+      string.replace(/e/gm, '2');
+   
+      string.replace(/i/gm, '3');
+  
+      string.replace(/o/gm, '4');
+  
+      string.replace(/u/gm, '5'); */
+    
+  
+  return resultado;
 }
+
+console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }

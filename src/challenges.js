@@ -177,11 +177,32 @@ function encode(string) {
   return resultado;
 }
 
-console.log(encode('hi there!'));
+/* console.log(encode('hi there!')); */
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  
+  let numeros = {
+    1 : "a",
+    2 : "e",
+    3 : "i",
+    4 : "o",
+    5 : "u",
+  }
+
+  let resultadoNumber = "";
+
+  for(let i = 0; i < string.length; i += 1){
+    if(string[i] === [numeros[i]]){
+      resultadoNumber += numeros[string[i]];
+    }else{
+      resultadoNumber += string[i];
+    }
+
+    return resultadoNumber;
+  }
 }
+
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
